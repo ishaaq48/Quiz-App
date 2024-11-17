@@ -14,25 +14,26 @@ body{
 }
 
 .question-card{
-  background-color: #78A389;
+  /* background-color: #78A389; */
   padding: 20px;
   border-radius: 10px;
 }
 
 .title-question
 {
-  color: #2F2F3D;
+  color: #9191A9;
   font-size: 1.25rem;
   padding: 20px;
 }
 
 .options
 {
-  background-color: #2F2F3D;
+  background-color: transparent;
   font-size: 1.7rem;
   width: 100%;
   margin: 10px;
   padding: 15px;
+  border: 2px solid #9191A9;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -51,17 +52,17 @@ body{
 
 .result-card
 {
-  background-color: #DC6E7C;
+  background-color: #78A389;
   padding: 20px;
   border-radius: 10px;
 }
 
 .result-container{
-  background-color: #262730;
+  background-color: #2F2F3D;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
 }
 .result-title{
-  color: #242424;
+  color: #2F2F3D;
 }

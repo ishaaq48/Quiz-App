@@ -1,7 +1,8 @@
 import { useState,useEffect } from "react"
+import { Link } from "react-router-dom"
 
 
-export default function QuestionApiCard({quizData, setQuizData,setQuesCompletion, setAns, ans}){
+export default function QuestionApiCard({quizData, setQuizData,quesCompletion,setQuesCompletion, setAns, ans}){
     
   const [quesIndex,setQuesIndex] = useState(0)
     
@@ -76,7 +77,7 @@ export default function QuestionApiCard({quizData, setQuizData,setQuesCompletion
             setQuesCompletion(true)
         }else{
             setQuesIndex(quesIndex+1)
-            // setTimer(30)
+            setTimer(30)
         }
 
     }
@@ -107,7 +108,7 @@ export default function QuestionApiCard({quizData, setQuizData,setQuesCompletion
               ) : (
                 <p>Loading questions...</p>
               )}
-              <button className='next-question' onClick={handleQueIndex}>Next Question</button>
+              {quesCompletion ? <button><Link to="/result">Result</Link></button> : <button className='next-question' onClick={handleQueIndex}>Next Question</button>}
           </div>
     )
 }

@@ -1,10 +1,11 @@
 
+import { Link } from 'react-router-dom'
 import '../App.css' 
 
-export default function Result({ans, quizData}){
+export default function Result({ans, quizData, setQuesCompletion}){
     const quesAnswered = ans.correct + ans.wrong
     const quesNotAnswered = quizData.length - quesAnswered
-
+    setQuesCompletion(false)
     return (
             <div className='result-card'>
                 <h1 className='result-title'>Result</h1>
@@ -14,6 +15,7 @@ export default function Result({ans, quizData}){
                     <h3 className='result-items'>Questions answered: {quesAnswered}</h3>
                     <h3 className='result-items'>Questions not answered: {quesNotAnswered}</h3>
                 </div>
+                <button><Link to="/">Restart Quiz</Link></button>
             </div>        
     )
 }
