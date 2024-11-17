@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     <h1 className='title'>Quiz App</h1>
-    <h3 className='title'>Time is ticking...</h3>
+    
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<Starter />}/>
