@@ -32,6 +32,10 @@ export default function Starter({selectCategory,setSelectCategory}){
         {
             "id": 15,
             "name": "Entertainment: Video Games"
+        },
+        {
+            "id": 32,
+            "name": "Entertainment: Cartoon & Animations"
         }
     ]
     function handleSelect(id){
@@ -50,7 +54,7 @@ export default function Starter({selectCategory,setSelectCategory}){
                     </li>
                 ))}
             </ul>
-            <button className='next-question' ><Link to="/questioncard">Start Quiz</Link></button>
+            <button className='next-question'><Link to="/questioncard">Start Quiz</Link></button>
         </div>
     )
 }
