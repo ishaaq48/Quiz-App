@@ -4,9 +4,11 @@
   Quiz App using React 
   
 # Features
-  1. Dynamic Questions from API
-  2. Routing and Navigation
-  3. Timer Functionality
-  4. Score Calculation
-  5. Responsive Design
-  6. Retake Quiz
+
+  1. Category-Based Quiz
+  2. Dynamic Questions from API
+  3. Routing and Navigation
+  4. Timer Functionality
+  5. Score Calculation
+  6. Responsive Design
+  7. Retake Quiz
