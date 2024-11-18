@@ -12,32 +12,35 @@ function App() {
                                   wrong: 0,
                                 })
   const [quizData, setQuizData] = useState([]);
+  const [selectCategory, setSelectCategory] = useState(9)
   return (
     <>
     <h1 className='title'>Quiz App</h1>
-    
     <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Starter />}/>
+          <Route path='/' element={
+            <Starter 
+              selectCategory={selectCategory}
+              setSelectCategory={setSelectCategory}
+              />}/>
           <Route path='/questioncard' element={
             <QuestionApiCard 
               quizData = {quizData} 
               setQuizData = {setQuizData}
               quesCompletion = {quesCompletion}
               setQuesCompletion = {setQuesCompletion}
+              selectCategory={selectCategory}
               setAns = {setAns}
               ans = {ans}
       />}/>
       <Route path='/result' element={
-          <Result 
+          <Result            
             ans = {ans} 
             quizData = {quizData}
             setQuesCompletion = {setQuesCompletion}
-            />}/>
+          />}/>
         </Routes>
-        
       </BrowserRouter>
-
     </>
   )
 }

@@ -15,7 +15,7 @@ export default function Result({ans, quizData, setQuesCompletion}){
                     <h3 className='result-items'>Questions answered: {quesAnswered}</h3>
                     <h3 className='result-items'>Questions not answered: {quesNotAnswered}</h3>
                 </div>
-                <button><Link to="/">Restart Quiz</Link></button>
+                <button className='next-question'><Link to="/">Restart Quiz</Link></button>
             </div>        
     )
 }

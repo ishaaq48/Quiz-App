@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
- 
 }
 body{
   background: radial-gradient(circle, #004d40, #000000);
@@ -12,23 +11,45 @@ body{
 .title{
   color: #9191A9;
 }
+.title-starter{
+  color: #000000;
+  padding: 20px;
+}
+.starter{
+  background-color: #78A389;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.category-card{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.category-card li::marker
+{
+  color: transparent;
+}
 
 .question-card{
-  /* background-color: #78A389; */
+  background-color: #78A389;
   padding: 20px;
   border-radius: 10px;
 }
 
 .title-question
 {
-  color: #9191A9;
+  color: #000000;
   font-size: 1.25rem;
   padding: 20px;
 }
 
 .options
 {
-  background-color: transparent;
+  background-color: #2F2F3D;
   font-size: 1.7rem;
   width: 100%;
   margin: 10px;

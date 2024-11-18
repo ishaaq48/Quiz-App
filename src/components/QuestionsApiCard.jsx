@@ -1,19 +1,16 @@
 import { useState,useEffect } from "react"
 import { Link } from "react-router-dom"
 
-
-export default function QuestionApiCard({quizData, setQuizData,quesCompletion,setQuesCompletion, setAns, ans}){
-    
+export default function QuestionApiCard({selectCategory,quizData, setQuizData,quesCompletion,setQuesCompletion, setAns, ans}){
   const [quesIndex,setQuesIndex] = useState(0)
     
   const [timer, setTimer] = useState(30) 
-
+  
   useEffect(() =>{
       if(timer === 0) {
           moveToNextQuestion()
           return
       }
-
        const interval = setInterval(() => {
       setTimer((prevTimer) => prevTimer - 1)
     }, 1000)
@@ -31,10 +28,8 @@ export default function QuestionApiCard({quizData, setQuizData,quesCompletion,se
               setQuesCompletion(true)
           }
        }
-
-
     useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=10&category=16&difficulty=easy&type=multiple")
+        fetch(`https://opentdb.com/api.php?amount=10&category=${selectCategory}&difficulty=easy&type=multiple`)
           .then((response) => response.json())
           .then((data) => {
             const formattedData = data.results.map((item) => ({
@@ -67,7 +62,6 @@ export default function QuestionApiCard({quizData, setQuizData,quesCompletion,se
         }
         console.log("Correct" , ans.correct)
         console.log("Wrong",ans.wrong)
-        
     }
 
       function handleQueIndex(){
@@ -108,7 +102,7 @@ export default function QuestionApiCard({quizData, setQuizData,quesCompletion,se
               ) : (
                 <p>Loading questions...</p>
               )}
-              {quesCompletion ? <button><Link to="/result">Result</Link></button> : <button className='next-question' onClick={handleQueIndex}>Next Question</button>}
+              {quesCompletion ? <button className='next-question'><Link to="/result">Result</Link></button> : <button className='next-question' onClick={handleQueIndex}>Next Question</button>}
           </div>
     )
 }
