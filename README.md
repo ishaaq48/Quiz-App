@@ -12,3 +12,5 @@
   5. Score Calculation
   6. Responsive Design
   7. Retake Quiz
+## Live Website
+Check out the live version of this project [here](https://trivify.netlify.app/).
